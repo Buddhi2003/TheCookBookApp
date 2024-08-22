@@ -9,7 +9,8 @@ TheCookBook is an Android app that helps users save, find, and filter recipes. I
 <img src="images/admindash.jpg" alt="Admin Dashboard" width="300"/>
 <img src="images/adminstat.jpg" alt="Admin Stats" width="300"/>
 <img src="images/infdash.jpg" alt="Influencer Dashboard" width="300"/>
-###Check images folder for more images
+
+Check images folder for more images
 
 ## Key Features
 ### User Functionality
