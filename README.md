@@ -1,14 +1,14 @@
 # TheCookBookApp
 TheCookBook is an Android app that helps users save, find, and filter recipes. It’s designed for three types of users: regular users, influencers, and admins. Regular users can search for and save their favorite recipes, while influencers can share their own. Admin manage everything to keep the app running smoothly.
 
-![Main Screen](images/home.jpg)
-![Recipe Details](images/recipedetail1.jpg)
-![TTS Function and Timer](images/recipedetail2.jpg)
-![Video](images/recipedetail3.jpg)
-![Comment Section](images/recipedetail4.jpg)
-![Admin Dashboard](images/admindash.jpg)
-![Admin Stats](images/adminstat.jpg)
-![Influencer Dashboard](images/infdash.jpg)
+<img src="images/home.jpg" alt="Main Screen" width="300"/>
+<img src="images/recipedetail1.jpg" alt="Recipe Details" width="300"/>
+<img src="images/recipedetail2.jpg" alt="TTS Function and Timer" width="300"/>
+<img src="images/recipedetail3.jpg" alt="Video" width="300"/>
+<img src="images/recipedetail4.jpg" alt="Comment Section" width="300"/>
+<img src="images/admindash.jpg" alt="Admin Dashboard" width="300"/>
+<img src="images/adminstat.jpg" alt="Admin Stats" width="300"/>
+<img src="images/infdash.jpg" alt="Influencer Dashboard" width="300"/>
 ###Check images folder for more images
 
 ## Key Features
