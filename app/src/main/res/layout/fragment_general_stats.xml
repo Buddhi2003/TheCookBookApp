@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/logincardbgcolor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminUI.Stats.GeneralStatsFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardElevation="20dp"
+        android:backgroundTint="@color/md_theme_onPrimary"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:padding="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalRecipesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="Total Number of Recipes:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalRecipesValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@id/statTotalRecipesLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalUsersLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="Total Number of Users:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statTotalRecipesLabel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalUsersValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@id/statTotalUsersLabel"
+                app:layout_constraintTop_toBottomOf="@id/statTotalRecipesValue" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalInfluencersLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginTop="16dp"
+                android:text="Total Number of Influencers:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statTotalUsersLabel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalInfluencersValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@id/statTotalInfluencersLabel"
+                app:layout_constraintTop_toBottomOf="@id/statTotalUsersValue" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalCommentsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginTop="16dp"
+                android:text="Total Number of Comments:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statTotalInfluencersLabel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalCommentsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@id/statTotalCommentsLabel"
+                app:layout_constraintTop_toBottomOf="@id/statTotalInfluencersValue" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalLikesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="Total Number of Likes:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statTotalCommentsLabel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statTotalLikesValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@id/statTotalLikesLabel"
+                app:layout_constraintTop_toBottomOf="@id/statTotalCommentsValue" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statAvgLikesPerRecipeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="Average Likes per Recipe:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statTotalLikesLabel" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/statAvgLikesPerRecipeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:fontFamily="@font/bree_serif"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                app:layout_constraintStart_toEndOf="@id/statAvgLikesPerRecipeLabel"
+                app:layout_constraintTop_toBottomOf="@id/statTotalLikesValue" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

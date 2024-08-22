@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/main"
+    tools:context=".InflUI.Recipes.RecipeEditActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/bgimagerecipeedit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imgrecipeadd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"
+        android:id="@+id/backbuttonedit"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/headingaddrecipe"
+        style="@style/TextAppearance.Material3.HeadlineMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:shadowColor="@color/md_theme_scrim"
+        android:shadowDx="1"
+        android:shadowDy="2"
+        android:shadowRadius="20"
+        android:text="EDIT YOUR RECIPE"
+        android:textColor="@color/md_theme_onSecondary"
+        android:textFontWeight="700"
+        app:fontFamily="@font/biryani_black"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/backbuttonedit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="385dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        style="@style/GlassmorphismCard"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingaddrecipe"
+        app:layout_constraintHorizontal_bias="0.5">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:padding="5dp"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/recipeimgedit"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="44dp"
+                    android:background="@drawable/baseline_image_24"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/RoundedSquare"
+                    app:strokeColor="@color/md_theme_onPrimaryFixedVariant"
+                    app:strokeWidth="2dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="36dp"
+                    app:errorEnabled="true"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeimgedit"
+                    tools:layout_editor_absoluteX="-2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editname"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:padding="5dp"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:textStyle="bold"
+                        android:textFontWeight="700"
+                        android:hint="Name"
+                        tools:layout_editor_absoluteX="54dp"
+                        tools:layout_editor_absoluteY="242dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    app:errorEnabled="true"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+                    tools:layout_editor_absoluteX="54dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editdescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Description"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:textStyle="bold"
+                        android:textFontWeight="700"
+                        tools:layout_editor_absoluteX="54dp"
+                        tools:layout_editor_absoluteY="312dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/editcategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.053"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView13" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/subtypeedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.076"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialTextView14" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textStyle="bold"
+                    android:textFontWeight="700"
+                    android:text="Category"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Subscription type"
+                    android:textFontWeight="700"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="28dp"
+                    app:errorEnabled="true"
+                    app:hintEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editcategory">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editorigin"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:hint="Origin"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:textStyle="bold"
+                        android:textFontWeight="700"
+                        android:padding="5dp"
+                        tools:layout_editor_absoluteX="54dp"
+                        tools:layout_editor_absoluteY="420dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="32dp"
+                    app:errorEnabled="true"
+                    app:hintEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_instructions_edit">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editvidid"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:textSize="20dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:textStyle="bold"
+                        android:textFontWeight="700"
+                        android:hint="Video Link"
+                        android:padding="5dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/ingredienttxtview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textStyle="bold"
+                    android:textFontWeight="700"
+                    android:text="Ingredients"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subtypeedit" />
+
+                <LinearLayout
+                    android:id="@+id/ingredients_container_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/add_ingredient_edit"
+                    app:layout_constraintTop_toBottomOf="@id/ingredienttxtview" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/add_ingredient_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Ingredents"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ingredients_container_edit" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/instructiontxtview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textStyle="bold"
+                    android:textFontWeight="700"
+                    android:layout_marginTop="16dp"
+                    android:text="Instructions"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/add_ingredient_edit" />
+
+                <LinearLayout
+                    android:id="@+id/instructions_container_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/instructiontxtview" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/add_instructions_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Add Instructions"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/instructions_container_edit" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/updateRecipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Update Recipe"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

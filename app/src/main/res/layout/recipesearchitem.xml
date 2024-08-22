@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardsearchrecipe"
+        style="@style/GlassmorphismCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeWidth="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/RecipeImgitemsearch"
+                android:layout_width="139dp"
+                android:layout_height="115dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:elevation="10dp"
+                android:background="@drawable/ic_launcher_background"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Rnameitemsearch"
+                app:layout_constraintVertical_bias="0.307"
+                app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Infnameitemsearch"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Influencer"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Categorysearch"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="Category"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/likecard" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/premiumimgsearch"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/premiumlogo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Categorysearch"
+                app:layout_constraintStart_toEndOf="@+id/RecipeImgitemsearch"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.RoundView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/descriptionitemsearch"
+                style="@style/TextAppearance.Material3.BodyMedium"
+                android:layout_width="191dp"
+                android:layout_height="95dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:padding="10dp"
+                android:text="Description"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Infnameitemsearch" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Rnameitemsearch"
+                style="@style/TextAppearance.Material3.HeadlineSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:shadowColor="@color/md_theme_scrim"
+                android:shadowDx="1"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Recipe Name"
+                app:fontFamily="@font/poppins_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/likecard"
+                style="@style/GlassmorphismCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionitemsearch">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/likecountsearchitem"
+                    style="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:drawableStart="@drawable/baseline_favorite_24"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="100" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/dividersearchrecipe"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardsearchrecipe" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

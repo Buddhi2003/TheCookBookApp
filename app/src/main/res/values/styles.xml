@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="FancyTextInputEditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/md_theme_surfaceContainerLow</item>
+        <item name="hintTextColor">@color/md_theme_onSurfaceVariant</item>
+        <item name="android:textColor">@color/md_theme_onSurfaceVariant</item>
+        <item name="boxStrokeColor">@color/md_theme_outlineVariant</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="GlassmorphismCard">
+        <item name="cardBackgroundColor">@color/translucent_white</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/light_gray</item>
+    </style>
+    <style name="GlassmorphismCardexplore">
+        <item name="cardBackgroundColor">#B3FFFFFF</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">#D3D3D3</item>
+    </style>
+    <style name="GlassmorphismCardregister">
+        <item name="cardBackgroundColor">@color/translucent_white_40</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/light_gray</item>
+    </style>
+
+    <style name="GlassmorphismSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@drawable/glassmorphism_search_bg</item>
+        <item name="searchHintIcon">@null</item>
+    </style>
+    <style name="GlassmorphismChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/translucent_white</item>
+        <item name="chipStrokeColor">@color/light_gray</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/md_theme_onSurface</item>
+        <item name="checkedIconTint">@color/md_theme_primary</item>
+    </style>
+
+    <style name="YourSpinnerTheme" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/spinnerstyle_login</item>
+        <item name="android:popupBackground">@color/yellow</item>
+    </style>
+
+    <style name="customchip" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg_color</item>
+        <item name="android:textColor">@color/chip_txt_color</item>
+        <item name="checkedIconTint">@color/md_theme_onSecondary</item>
+    </style>
+
+</resources>

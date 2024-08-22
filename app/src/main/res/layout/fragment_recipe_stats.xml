@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/logincardbgcolor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminUI.Stats.RecipeStatsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/carddetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="20dp"
+                android:backgroundTint="@color/md_theme_onPrimary"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/labelTotalRecipes"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:fontFamily="@font/bree_serif"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Total Number of Recipes"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/labelRecipesVeg"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="28dp"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="Veg Recipes"
+                        app:fontFamily="@font/bree_serif"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/labelTotalRecipes" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/labelRecipesNonVeg"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        app:fontFamily="@font/bree_serif"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:layout_marginTop="24dp"
+                        android:text="Non-Veg Recipes"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/labelRecipesVeg" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/labelRecipesBasic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        app:fontFamily="@font/bree_serif"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="Basic Recipes"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/labelRecipesNonVeg" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/labelRecipesPremium"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        app:fontFamily="@font/bree_serif"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="Premium Recipes"
+                        android:layout_marginBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/labelRecipesBasic" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/valueTotalRecipes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        app:fontFamily="@font/bree_serif"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:layout_marginEnd="22dp"
+                        android:layout_marginStart="12dp"
+                        android:text="1000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.232"
+                        app:layout_constraintStart_toEndOf="@+id/labelTotalRecipes"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/valueRecipesVeg"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="106dp"
+                        android:layout_marginTop="28dp"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="250"
+                        app:fontFamily="@font/bree_serif"
+                        app:layout_constraintEnd_toEndOf="@+id/valueTotalRecipes"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/labelRecipesVeg"
+                        app:layout_constraintTop_toBottomOf="@+id/valueTotalRecipes" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/valueRecipesNonVeg"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="500"
+                        app:fontFamily="@font/bree_serif"
+                        app:layout_constraintEnd_toEndOf="@+id/valueRecipesVeg"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/labelRecipesNonVeg"
+                        app:layout_constraintTop_toBottomOf="@+id/valueRecipesVeg" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/valueRecipesBasic"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="250"
+                        app:fontFamily="@font/bree_serif"
+                        app:layout_constraintEnd_toEndOf="@+id/valueRecipesNonVeg"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/labelRecipesBasic"
+                        app:layout_constraintTop_toBottomOf="@+id/valueRecipesNonVeg" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/valueRecipesPremium"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="20dp"
+                        android:shadowColor="@color/light_gray"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="10"
+                        android:text="500"
+                        app:fontFamily="@font/bree_serif"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/valueRecipesBasic"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/labelRecipesPremium"
+                        app:layout_constraintTop_toBottomOf="@+id/valueRecipesBasic"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/labelPopularRecipesLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                app:fontFamily="@font/bree_serif"
+                android:text="Most Popular 5 Recipes (based on likes)"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carddetails" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card1recipebar"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="12dp"
+                app:cardElevation="10dp"
+                android:backgroundTint="@color/md_theme_onTertiary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelPopularRecipesLikes">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChartPopularRecipesLikes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/labelCommentedRecipes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="34dp"
+                android:shadowColor="@color/light_gray"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                app:fontFamily="@font/bree_serif"
+                android:text="Most Commented 5 Recipes"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card1recipebar" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/md_theme_onTertiary"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelCommentedRecipes">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChartCommentedRecipes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

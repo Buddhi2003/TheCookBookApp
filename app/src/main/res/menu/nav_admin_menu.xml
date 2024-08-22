@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/admin_nav_home"
+            android:icon="@drawable/baseline_update_24"
+            android:title="Pending Items" />
+        <item
+            android:id="@+id/admin_nav_manage_inf"
+            android:icon="@drawable/baseline_perm_identity_24"
+            android:title="Manage Influencers" />
+
+        <item
+            android:id="@+id/admin_nav_manage_user"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Manage User" />
+    </group>
+    <group android:id="@+id/group2">
+        <item android:title="Stats">
+            <menu>
+                <item
+                    android:id="@+id/admin_nav_general_stats"
+                    android:icon="@drawable/baseline_trending_up_24"
+                    android:title="General Stats" />
+                <item
+                    android:id="@+id/admin_nav_recipe_stats"
+                    android:icon="@drawable/baseline_fastfood_24"
+                    android:title="Recipes" />
+                <item
+                    android:id="@+id/admin_nav_inf_stats"
+                    android:icon="@drawable/baseline_perm_identity_24"
+                    android:title="Influencers" />
+                <item
+                    android:id="@+id/admin_nav_user_stats"
+                    android:icon="@drawable/baseline_person_24"
+                    android:title="Users"/>
+            </menu>
+        </item>
+
+    </group>
+    <group android:id="@+id/group3">
+            <item
+                android:id="@+id/admin_nav_logout"
+                android:title="Logout"
+                android:icon="@drawable/baseline_logout_24" />
+    </group>
+</menu>

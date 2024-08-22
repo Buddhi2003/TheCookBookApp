@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/GlassmorphismCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:padding="5dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/RecipeImgiteminf"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/Recipenameiteminf"
+                style="@style/TextAppearance.Material3.HeadlineSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Recipe Name"
+                android:textFontWeight="700"
+                android:shadowColor="@color/md_theme_scrim"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="20"
+                app:fontFamily="@font/biryani_black"
+                android:textColor="@color/md_theme_onSecondary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/categoryinfitem"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:shadowColor="@color/md_theme_scrim"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="20"
+                android:padding="5dp"
+                android:textColor="@color/md_theme_onSecondary"
+                android:text="Category"
+                android:textStyle="bold"
+                android:textFontWeight="700"
+                app:layout_constraintStart_toStartOf="@+id/Recipenameiteminf"
+                app:layout_constraintTop_toBottomOf="@+id/Recipenameiteminf" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/like"
+                style="@style/GlassmorphismCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/delete_recipe">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/totallikesinf"
+                    style="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:drawableStart="@drawable/baseline_favorite_24"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/likebtn" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/edit_recipe"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:shadowColor="@color/md_theme_scrim"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="20"
+                android:backgroundTint="@color/translucent_white"
+                android:text="Edit"
+                android:textSize="18dp"
+                android:textColor="@color/md_theme_onSecondary"
+                app:icon="@drawable/baseline_edit_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/md_theme_onErrorContainer"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete_recipe"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/translucent_white"
+                android:shadowColor="@color/md_theme_scrim"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="20"
+                android:text="Delete"
+                android:textSize="18dp"
+                android:textColor="@color/md_theme_onSecondary"
+                app:icon="@drawable/baseline_delete_sweep_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edit_recipe"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/md_theme_onErrorContainer"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
