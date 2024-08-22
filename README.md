@@ -32,6 +32,7 @@ TheCookBook is an Android app that helps users save, find, and filter recipes. I
 - **Java**
 - **SQLite**
 - **Material Design Components**
+- **Blurry Library**
 
 ## Installation
 1. Clone the repository:
